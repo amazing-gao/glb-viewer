@@ -1,0 +1,17 @@
+{
+  "name": "glb-character-player",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GLB 人物模型 + 动作模型网页播放器",
+  "scripts": {
+    "build": "esbuild src/main.js --bundle --format=iife --target=es2020 --minify --define:import.meta.url=location.href --outfile=dist/app.js --legal-comments=none",
+    "watch": "npm run build -- --watch",
+    "start": "python3 -m http.server 8777 --bind 127.0.0.1"
+  },
+  "dependencies": {
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}
